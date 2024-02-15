@@ -16,3 +16,7 @@ hour=$(TZ='Canada/Vancouver' date -u +%H)
 day=$(TZ='Canada/Vancouver' date -u +%d)
 month=$(TZ='Canada/Vancouver' date +%m)
 year=$(TZ='Canada/Vancouver' date +%Y)
+
+# Log the weather
+record=$(echo -e "$year\t$month\t$day\t$curr_temp\t$fc_temp C")
+echo $record>>rx_poc.log
